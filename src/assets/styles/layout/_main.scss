@@ -1,0 +1,45 @@
+main {
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+
+  aside {
+    position: fixed;
+    width: 25%;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    background-color: $white--clr;
+    padding: 5rem 3rem;
+
+    header {
+      h1 {
+        font-family: inherit;
+        font-size: 3rem;
+        font-weight: 500;
+        color: $black--clr;
+        text-align: center;
+      }
+    }
+    .addNotes {
+      font-family: inherit;
+      font-weight: 500;
+      font-size: 6rem;
+      color: $white--clr;
+      background-color: $dark--blue--clr--800;
+      width: 8rem;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 3rem;
+      right: 3rem;
+    }
+  }
+
+  .outlet {
+    width: 75%;
+    height: 100vh;
+    margin-left: auto;
+    background-color: $light--blue--clr--300;
+  }
+}
