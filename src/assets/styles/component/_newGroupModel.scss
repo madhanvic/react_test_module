@@ -1,0 +1,104 @@
+.newGroup__content {
+  background-color: $white--clr;
+  padding: 3.6rem;
+  border-radius: 0.5rem;
+  h3 {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 2.8rem;
+    color: $black--clr;
+    margin-bottom: 2rem;
+    letter-spacing: 0.1rem;
+  }
+  .newGroup__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    &--group {
+      &--control {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 3.6rem;
+        label.newGroup__form--label {
+          font-family: inherit;
+          font-weight: 500;
+          font-size: 2.4rem;
+          color: $black--clr;
+          display: inline-block;
+        }
+        input[type="text"] {
+          flex-grow: 1;
+          width: 20vw;
+          max-width: 360px;
+          font-family: inherit;
+          font-weight: 400;
+          font-size: 1.7rem;
+          color: $gray--clr--500;
+          padding: 1rem 2.2rem;
+          border-radius: 100px;
+          border: 1px solid $gray--clr--400;
+          letter-spacing: 0.1rem;
+          &::placeholder {
+            font-family: inherit;
+            font-weight: 400;
+            font-size: 1.8rem;
+            color: $gray--clr--500;
+            letter-spacing: 0.1rem;
+          }
+        }
+        .newGroup__form--color__palets {
+          flex-grow: 1;
+
+          label {
+            &.active {
+              border: 3px solid $dark--blue--clr--800;
+            }
+            &:not(:last-child) {
+              margin-right: 1.2rem;
+            }
+            display: inline-block;
+            width: 3.4rem;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            cursor: pointer;
+            &[for="newGroup__form--color__palets-violet"] {
+              background-color: $palet--violet--clr;
+            }
+            &[for="newGroup__form--color__palets-pink"] {
+              background-color: $palet--pink--clr;
+            }
+            &[for="newGroup__form--color__palets-skyBlue"] {
+              background-color: $palet--skyblue--clr;
+            }
+            &[for="newGroup__form--color__palets-orange"] {
+              background-color: $palet--orange--clr;
+            }
+            &[for="newGroup__form--color__palets-blue"] {
+              background-color: $palet--blue--clr;
+            }
+            &[for="newGroup__form--color__palets-darkBlue"] {
+              background-color: $palet--darkblue--clr;
+            }
+            input[type="radio"] {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    &--create {
+      text-align: end;
+      &-btn {
+        font-family: inherit;
+        font-size: 1.6rem;
+        font-weight: 300;
+        padding: 0.7rem 4rem;
+        color: $white--clr;
+        background-color: $dark--blue--clr--600;
+        border-radius: 0.6rem;
+        letter-spacing: 0.1rem;
+      }
+    }
+  }
+}

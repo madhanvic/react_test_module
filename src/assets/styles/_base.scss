@@ -16,6 +16,13 @@ a {
   text-decoration: none;
 }
 
+input[type="text"],
+input[type="number"] {
+  &:focus {
+    outline: none;
+  }
+}
+
 button {
   background-color: transparent;
   border: none;

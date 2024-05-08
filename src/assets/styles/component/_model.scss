@@ -1,0 +1,17 @@
+.model {
+  &__backdrop {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: $modal--backdrop--clr;
+    top: 0;
+    left: 0;
+  }
+
+  &__dialog {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
