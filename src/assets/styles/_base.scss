@@ -17,7 +17,8 @@ a {
 }
 
 input[type="text"],
-input[type="number"] {
+input[type="number"],
+textarea {
   &:focus {
     outline: none;
   }
