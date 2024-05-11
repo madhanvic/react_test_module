@@ -1,26 +1,22 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./pages/Home";
-import Starter from "./layout/Starter";
-import ChatArea from "./pages/ChatArea";
+import { Provider } from "react-redux";
+import store from "./store/store";
+import WebApp from "./WebApp";
+import MobileApp from "./MobileApp";
+import { useFindBreakPoint } from "./hook/useFindBreakPoint";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Starter />,
-    children: [
-      {
-        index: true,
-        element: <Home />,
-      },
-      {
-        path: ":id",
-        element: <ChatArea />,
-      },
-    ],
-  },
-]);
-function App() {
-  return <RouterProvider router={router} />;
-}
+const App = () => {
+  const screenWidth = useFindBreakPoint();
+  const isWeb =
+    screenWidth > 992
+      ? window.innerWidth > 992
+        ? true
+        : false
+      : window.innerWidth <= 992
+      ? false
+      : true;
+  return (
+    <Provider store={store}>{isWeb ? <WebApp /> : <MobileApp />}</Provider>
+  );
+};
 
 export default App;

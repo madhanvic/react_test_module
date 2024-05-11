@@ -1,27 +1,83 @@
 .notes {
-  padding-top: 4rem;
+  flex-grow: 1;
+  overflow-y: auto;
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: clamp(0.5rem, 0.75vw, 1rem);
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: $white--clr;
+    border-radius: 100px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $dark--blue--clr--600;
+    border-radius: 100px;
+  }
+
   &__list {
+    // padding: clamp(0.6rem, 1.7vh, 1.2rem) clamp(2rem, 1.75vw, 3rem);
+    border-radius: 1.5rem;
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+    &.active {
+      background-color: $contact--hover--clr;
+    }
+    &:hover {
+      background-color: $contact--hover--clr;
+    }
   }
   &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(0.6rem, 1.7vh, 1.2rem) clamp(2rem, 1.75vw, 3rem);
     span:first-child {
       background-color: $palet--darkblue--clr;
       color: $white--clr;
       font-family: inherit;
       font-weight: 400;
-      font-size: 2.2rem;
+      font-size: clamp(1.8rem, 1.35vw, 2.2rem);
       display: inline-flex;
       justify-content: center;
       align-items: center;
-      width: 6rem;
+      min-width: clamp(5rem, 3.25vw, 6rem);
       aspect-ratio: 1 / 1;
       border-radius: 50%;
+      text-transform: uppercase;
     }
     span:last-child {
+      flex-grow: 1;
+      text-align: start;
       font-family: inherit;
       font-weight: 500;
-      font-size: 2.2rem;
+      font-size: clamp(1.8rem, 1.35vw, 2.2rem);
       color: $black--clr;
-      margin-left: 2rem;
+      margin-left: clamp(1.2rem, 1.25vw, 2rem);
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
   }
+}
+
+.noteList__loading {
+  flex-grow: 1;
+  font-size: clamp(1.5rem, 1.25vw, 2rem);
+  font-weight: 500;
+  color: $gray--clr--600;
+  padding-left: clamp(2rem, 1.75vw, 3rem);
+}
+.noteList__notfound {
+  flex-grow: 1;
+  font-size: 2rem;
+  font-weight: 500;
+  color: $gray--clr--600;
+  padding-left: clamp(2rem, 1.75vw, 3rem);
 }

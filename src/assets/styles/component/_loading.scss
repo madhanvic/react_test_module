@@ -1,0 +1,11 @@
+.loading {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    font-size: clamp(5rem, 5.25vw, 10rem);
+    font-weight: 900;
+  }
+}

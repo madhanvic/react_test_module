@@ -1,18 +1,25 @@
 import { useState } from "react";
 import NotesList from "../component/NotesList";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import NewGroupModel from "../component/NewGroupModel";
 const Starter = () => {
   const [isNewGroupModelOpen, setIsNewGroupModelOpen] = useState(false);
+
   return (
     <>
-      <main>
+      <main className="starter">
         <aside>
           <header>
-            <h1>Pocket Notes</h1>
+            <h1>
+              <Link to={"/"}>Pocket Notes</Link>
+            </h1>
           </header>
           <NotesList />
-          <button type="button" className="addNotes">
+          <button
+            type="button"
+            className="addNotes"
+            onClick={() => setIsNewGroupModelOpen(true)}
+          >
             +
           </button>
         </aside>
@@ -20,7 +27,9 @@ const Starter = () => {
           <Outlet />
         </div>
       </main>
-      {isNewGroupModelOpen && <NewGroupModel />}
+      {isNewGroupModelOpen && (
+        <NewGroupModel onModalClose={setIsNewGroupModelOpen} />
+      )}
     </>
   );
 };

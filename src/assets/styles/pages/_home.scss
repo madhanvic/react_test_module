@@ -8,12 +8,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 1.6rem;
+    row-gap: clamp(1rem, 2.1vh, 1.6rem);
     img {
       width: 30vw;
     }
     h2 {
-      font-size: 4.6rem;
+      font-size: clamp(3.8rem, 2.55vw, 4.6rem);
       font-family: inherit;
       color: $black--clr;
       font-weight: 700;
@@ -22,7 +22,7 @@
       text-align: justify;
       font-family: inherit;
       font-weight: 500;
-      font-size: 2.1rem;
+      font-size: clamp(1.7rem, 1.3vw, 2.1rem);
       color: $black--clr--600;
       line-height: 2.8rem;
     }
@@ -35,16 +35,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2.6rem;
+    margin-bottom: clamp(2rem, 3.1vh, 2.6rem);
     p {
       font-family: inherit;
       font-weight: 400;
-      font-size: 2rem;
+      font-size: clamp(1.7rem, 1.3vw, 2.1rem);
       color: $black--clr--600;
       img {
       }
       span {
-        margin-left: 1.6rem;
+        margin-left: clamp(1rem, 1.15vw, 1.6rem);
       }
     }
   }
