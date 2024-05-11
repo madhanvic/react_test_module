@@ -9,13 +9,13 @@
 
   /* Track */
   &::-webkit-scrollbar-track {
-    background: $white--clr;
+    background: $gray--clr--300;
     border-radius: 100px;
   }
 
   /* Handle */
   &::-webkit-scrollbar-thumb {
-    background: $dark--blue--clr--600;
+    background: $white--clr;
     border-radius: 100px;
   }
 
