@@ -87,7 +87,9 @@ const ChatArea = () => {
               ? `${data.groupName.split(" ")[0][0]}${
                   data.groupName.split(" ")[1][0]
                 }`
-              : `${data.groupName[0]}${data.groupName[1]}`}
+              : `${data.groupName[0]}${
+                  data.groupName[1] !== undefined ? data.groupName[1] : ""
+                }`}
           </span>
           <span>{data.groupName}</span>
         </h3>

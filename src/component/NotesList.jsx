@@ -25,7 +25,9 @@ const NotesList = () => {
                   ? `${note.groupName.split(" ")[0][0]}${
                       note.groupName.split(" ")[1][0]
                     }`
-                  : `${note.groupName[0]}${note.groupName[1]}`}
+                  : `${note.groupName[0]}${
+                      note.groupName[1] !== undefined ? note.groupName[1] : ""
+                    }`}
               </span>
               <span>{note.groupName}</span>
             </NavLink>
