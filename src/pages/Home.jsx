@@ -12,7 +12,7 @@ const Home = () => {
       <footer>
         <p>
           <img
-            src="./src/assets/images/encrypt.png"
+            src="./assets/images/encrypt.png"
             alt="encrypted"
             width={15}
             height={18}
