@@ -1,3 +1,6 @@
+//Images
+import encryptedImg from "../assets/images/encrypt.png";
+
 const Home = () => {
   return (
     <section className="home">
@@ -11,12 +14,7 @@ const Home = () => {
       </div>
       <footer>
         <p>
-          <img
-            src="./assets/images/encrypt.png"
-            alt="encrypted"
-            width={15}
-            height={18}
-          />
+          <img src={encryptedImg} alt="encrypted" width={15} height={18} />
           <span>end-to-end encrypted</span>
         </p>
       </footer>
