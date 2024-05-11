@@ -1,11 +1,12 @@
 //Images
+import homeBgImg from "../assets/images/chat_empty_bg.png";
 import encryptedImg from "../assets/images/encrypt.png";
 
 const Home = () => {
   return (
     <section className="home">
       <div className="content">
-        <img src="/src/assets/images/chat_empty_bg.png" alt="Background" />
+        <img src={homeBgImg} alt="Background" />
         <h2>Pocket Notes</h2>
         <p>
           Send and receive messages without keeping your phone online.

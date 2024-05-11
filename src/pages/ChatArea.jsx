@@ -5,6 +5,10 @@ import { format } from "date-fns";
 import Loading from "../component/Loading";
 import { useFindBreakPoint } from "../hook/useFindBreakPoint";
 
+//Images
+import backImg from "../assets/images/back.png";
+import sendImg from "../assets/images/send.png";
+
 const initialNotes = {
   value: "",
   valid: false,
@@ -73,12 +77,7 @@ const ChatArea = () => {
       <header>
         {isMobile && (
           <button type="button" onClick={() => navigate(-1)}>
-            <img
-              src="/src/assets/images/back.png"
-              width={14}
-              height={12}
-              alt="back"
-            />
+            <img src={backImg} width={14} height={12} alt="back" />
           </button>
         )}
 
@@ -128,12 +127,7 @@ const ChatArea = () => {
             disabled={!notes.valid}
             className={!notes.valid || addNotesIsLoading ? "disabled" : ""}
           >
-            <img
-              alt="send"
-              src="/src/assets/images/send.png"
-              width={29}
-              height={23}
-            />
+            <img alt="send" src={sendImg} width={29} height={23} />
           </button>
         </form>
       </div>
